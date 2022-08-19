@@ -15,7 +15,6 @@
 				<div>
 					<div v-if="!todo.showFormTodo">
 						<button class="action-btn" @click="todo.showFormTodo = true">
-							<i class="fa-solid fa-pen-clip"></i>
 						</button>
 						<button class="action-btn" @click="destroy(index)">
 							<i class="fa-solid fa-trash-can"></i>
@@ -30,16 +29,16 @@
 </template>
 <script>
 export default {
-	props: {
-		todos: {
-			type: Object
-		}
-	},
+    props: {
+        todos: {
+            type: Object
+        }
+    },
     data() {
         return {
             todosList: this.todos,
         };
-	},
+    },
     methods: {
         destroy(index) {
             this.todosList.splice(index, 1);
@@ -47,7 +46,7 @@ export default {
         updateTodo(index) {
             this.todosList[index].showFormTodo = false;
         }
-    },
+	}
 };
 </script>
 <style>
